@@ -1,299 +1,483 @@
-<!DOCTYPE html>
-<html lang="mn">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AutoScan Training Center</title>
-  <meta name="description" content="AutoScan Training Center – Автомашины цахилгаан, оношлогоо, ECU & CAN сургалт" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+/* ============================================================
+   AutoScan Training – Neon Cyan Theme (Full style.css)
+   ============================================================ */
+:root{
+  --bg:#050509;
+  --bg2:#0e0e15;
+  --card:#141423;
+  --card2:#11111d;
+  --text:#f5f5f5;
+  --muted:#a8a8b4;
+  --border:#23233a;
 
-  <!-- HEADER -->
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a class="brand" href="index.html">
-        <span class="brand-dot"></span>
-        <span class="brand-text">AutoScan <b>Training</b></span>
-      </a>
+  --accent:#00d1ff;
+  --accent2:#00a3ff;
+  --accent-rgb:0,209,255;
+  --accent2-rgb:0,163,255;
 
-      <button class="nav-toggle" id="navToggle" aria-label="menu">☰</button>
+  --shadow:0 18px 60px rgba(0,0,0,.45);
+  --radius:18px;
+}
 
-      <nav class="nav" id="nav">
-        <a href="#training">Сургалт</a>
-        <a href="#about">Тухай</a>
-        <a href="#contact">Бүртгэл</a>
-      </nav>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:
+    radial-gradient(900px 500px at 15% 10%, rgba(var(--accent-rgb),.20), transparent 55%),
+    radial-gradient(900px 500px at 90% 10%, rgba(var(--accent2-rgb),.12), transparent 60%),
+    linear-gradient(180deg,var(--bg),#030307 70%);
+  color:var(--text);
+  line-height:1.55;
+}
 
-      <a class="btn btn-ghost" href="#contact">Холбогдох</a>
-    </div>
-  </header>
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 18px}
+.muted{color:var(--muted)}
+.accent{color:var(--accent)}
 
-  <!-- HERO -->
-  <main class="hero" id="home">
-    <div class="container hero-grid">
-      <div class="hero-left">
-        <div class="pill">
-          <span class="pill-dot"></span>
-          Бодит гараж дээр суурилсан сургалт
-        </div>
+/* ---------------- TOP BAR ---------------- */
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(5,5,9,.55);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.topbar-inner{
+  display:flex;align-items:center;justify-content:space-between;height:68px;
+}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-dot{
+  width:10px;height:10px;border-radius:999px;background:var(--accent);
+  box-shadow:0 0 0 6px rgba(var(--accent-rgb),.15);
+}
+.brand-text{font-size:16px;letter-spacing:.2px}
+.nav{display:flex;gap:18px}
+.nav a{
+  color:var(--muted);
+  padding:10px 10px;
+  border-radius:10px;
+}
+.nav a:hover{color:var(--text);background:rgba(255,255,255,.06)}
 
-        <h1 class="hero-title">
-          Автомашины <span class="accent">цахилгаан</span>, <span class="accent">оношлогоо</span>,
-          <span class="accent">ECU & CAN</span>-ийг ойлгомжтой, бодитоор суръя
-        </h1>
+.btn{
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.04);
+  color:var(--text);
+  padding:11px 14px;
+  border-radius:14px;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  transition:.2s ease;
+  font-weight:600;
+}
+.btn:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.18)}
+.btn-primary{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  border-color:rgba(255,255,255,.10);
+  box-shadow:0 12px 40px rgba(var(--accent-rgb),.25);
+}
+.btn-primary:hover{box-shadow:0 16px 55px rgba(var(--accent-rgb),.35)}
+.btn-soft{
+  background:rgba(var(--accent-rgb),.10);
+  border-color:rgba(var(--accent-rgb),.35);
+}
+.btn-ghost{background:rgba(255,255,255,.03)}
+.icon-btn{
+  width:40px;height:40px;border-radius:12px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.04);
+  color:var(--text);
+  cursor:pointer;
+}
 
-        <p class="hero-sub">
-          Эхлэгч хүн ч ойлгохоор — алхамчилсан тайлбар + дадлага + кейс дээр суурилсан аргачлал.
-        </p>
+/* ---------------- HERO ---------------- */
+.hero{padding:48px 0 18px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:start}
+.hero-left{padding-top:10px}
+.pill{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:8px 12px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.04);
+  color:var(--muted);
+}
+.pill-dot{width:8px;height:8px;border-radius:999px;background:var(--accent)}
+.hero-title{font-size:40px;line-height:1.1;margin:14px 0 12px}
+.hero-sub{color:var(--muted);font-size:16px;margin:0 0 18px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#training">Сургалтууд үзэх</a>
-          <a class="btn btn-soft" href="#contact">Онлайн бүртгүүлэх</a>
-        </div>
+.stats{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:12px;margin-top:18px;
+}
+.stat{
+  padding:14px;border-radius:16px;
+  border:1px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.03);
+}
+.stat-num{font-weight:800;font-size:16px}
+.stat-txt{color:var(--muted);font-size:13px;margin-top:2px}
 
-        <div class="stats">
-          <div class="stat">
-            <div class="stat-num">4</div>
-            <div class="stat-txt">Сургалтын төрөл</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">Hands-on</div>
-            <div class="stat-txt">Бодит дадлага</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">Certificate</div>
-            <div class="stat-txt">Сертификат</div>
-          </div>
-        </div>
-      </div>
+/* ---------------- HERO CARD ---------------- */
+.hero-card{
+  border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,.10);
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.hero-card-top{
+  display:flex;justify-content:flex-end;gap:10px;
+  padding:14px 14px 0;
+}
+.badge{
+  font-size:12px;font-weight:800;
+  padding:6px 10px;border-radius:999px;
+  background:rgba(var(--accent-rgb),.14);
+  border:1px solid rgba(var(--accent-rgb),.35);
+}
+.badge.ghost{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.10);
+  color:var(--muted);
+}
+.terminal{margin:12px 14px 14px;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.10)}
+.terminal-bar{
+  display:flex;align-items:center;gap:8px;
+  padding:10px 12px;background:rgba(0,0,0,.25);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.dot{width:10px;height:10px;border-radius:999px;background:rgba(255,255,255,.28)}
+.dot.red{background:#ff5a5f}
+.dot.yellow{background:#ffbd2e}
+.dot.green{background:#28c840}
+.terminal-title{margin-left:auto;color:var(--muted);font-size:12px}
+.terminal-body{
+  margin:0;padding:12px;
+  background:rgba(0,0,0,.18);
+  color:#e9e9ef;
+  font-size:12.5px;
+  white-space:pre-wrap;
+}
+.hero-note{padding:0 14px 16px}
+.hero-note-title{font-weight:800;margin:0 0 8px}
+.checklist{margin:0;padding-left:18px;color:var(--muted)}
+.checklist li{margin:6px 0}
 
-      <div class="hero-right">
-        <div class="hero-card">
-          <div class="hero-card-top">
-            <div class="badge">NEW</div>
-            <div class="badge ghost">2025</div>
-          </div>
+/* ---------------- SECTION ---------------- */
+.section{padding:56px 0}
+.section-alt{
+  background:linear-gradient(180deg,transparent,rgba(255,255,255,.03),transparent);
+  border-top:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.section-head{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  gap:14px;margin-bottom:18px;
+}
+.section-title{font-size:28px;margin:0 0 6px}
+.section-sub{color:var(--muted);margin:0}
 
-          <div class="terminal">
-            <div class="terminal-bar">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-              <span class="terminal-title">training-plan.log</span>
-            </div>
-            <pre class="terminal-body">
-[OK] Суурь хэмжилт + аюулгүй ажиллагаа
-[OK] Wiring diagram унших
-[OK] DTC + Live data workflow
-[OK] CAN ойлголтын суурь
-[OK] ECU & CAN практик (зөв хэрэглээ)
-            </pre>
-          </div>
+.grid.cards{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
 
-          <div class="hero-note">
-            <div class="hero-note-title">Яагаад AutoScan?</div>
-            <ul class="checklist">
-              <li>Алхамчилсан ойлгомжтой тайлбар</li>
-              <li>Бодит кейс дээр шийдэл гаргана</li>
-              <li>Хэмжилтийн зөв дадлыг суулгана</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
+.card{
+  border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.03);
+  padding:16px;
+  box-shadow:0 14px 45px rgba(0,0,0,.35);
+}
+.card-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.card-top h3{margin:0;font-size:18px}
+.tag{
+  font-size:12px;font-weight:800;
+  padding:6px 10px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.04);
+  color:var(--muted);
+}
+.card-text{color:var(--muted);margin:10px 0 12px}
+.card-meta{display:flex;flex-direction:column;gap:6px;color:var(--muted);font-size:13px;margin-bottom:12px}
 
-  <!-- TRAINING -->
-  <section id="training" class="section">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <h2 class="section-title">Сургалтын хөтөлбөрүүд</h2>
-          <p class="section-sub">Карт дээр дарж дэлгэрэнгүй хуудсаар орно.</p>
-        </div>
-      </div>
+/* ---------------- ABOUT ---------------- */
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}
+.about-card{
+  border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.03);
+  padding:18px;
+}
+.about-card.glow{
+  background:
+    radial-gradient(650px 300px at 30% 0%, rgba(var(--accent-rgb),.18), transparent 55%),
+    rgba(255,255,255,.03);
+}
+.about-list{display:grid;gap:12px;margin-top:14px}
+.about-item{display:flex;gap:12px;align-items:flex-start}
+.about-icon{
+  width:40px;height:40px;border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.10);
+}
 
-      <div class="grid cards">
-        <article class="card">
-          <div class="card-top">
-            <h3>Electrical Training</h3>
-            <div class="tag">Beginner → Intermediate</div>
-          </div>
-          <p class="card-text">
-            Суурь цахилгаан ойлголт, multimeter зөв ашиглалт, гэмтэл хайх үндсэн аргачлал.
-          </p>
-          <div class="card-meta">
-            <span>⏱ 4–8 долоо хоног</span>
-            <span>📍 Танхим + дадлага</span>
-          </div>
-          <a class="btn btn-ghost" href="electrical.html">Дэлгэрэнгүй</a>
-        </article>
+/* ---------------- CONTACT ---------------- */
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}
+.contact-card{
+  border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.03);
+  padding:18px;
+}
+.contact-card.glow{
+  background:
+    radial-gradient(650px 300px at 40% 0%, rgba(var(--accent-rgb),.16), transparent 55%),
+    rgba(255,255,255,.03);
+}
 
-        <article class="card">
-          <div class="card-top">
-            <h3>Diagnostics Masterclass</h3>
-            <div class="tag">Core</div>
-          </div>
-          <p class="card-text">
-            DTC зөв унших, live data тайлбарлах, оношилгооны workflow-оор кейс шийдэх.
-          </p>
-          <div class="card-meta">
-            <span>⏱ 4–8 долоо хоног</span>
-            <span>🧠 Case-based</span>
-          </div>
-          <a class="btn btn-ghost" href="diagnostics.html">Дэлгэрэнгүй</a>
-        </article>
+/* ---------------- CHIPS / PICKER ---------------- */
+.chip{
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.04);
+  color:var(--text);
+  padding:10px 12px;
+  border-radius:999px;
+  cursor:pointer;
+  font-weight:800;
+  transition:.15s ease;
+}
+.chip:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.18)}
+.chip.active{
+  background:rgba(var(--accent-rgb),.14);
+  border-color:rgba(var(--accent-rgb),.40);
+  box-shadow:0 12px 40px rgba(var(--accent-rgb),.18);
+}
 
-        <article class="card">
-          <div class="card-top">
-            <h3>ECU & CAN Training</h3>
-            <div class="tag">Advanced</div>
-          </div>
-          <p class="card-text">
-            CAN суурь ойлголт, сүлжээний оношилгоо, ECU бүтэц/логик (аюулгүй, зөв хэрэглээ).
-          </p>
-          <div class="card-meta">
-            <span>⏱ 6–10 долоо хоног</span>
-            <span>🧩 Lab</span>
-          </div>
-          <a class="btn btn-ghost" href="ecu-can.html">Дэлгэрэнгүй</a>
-        </article>
+/* ---------------- FOOTER ---------------- */
+.footer{
+  padding:18px 0 28px;
+  border-top:1px solid rgba(255,255,255,.06);
+  color:var(--muted);
+}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.footer-links{display:flex;gap:14px}
+.footer-links a:hover{color:var(--text)}
 
-        <article class="card">
-          <div class="card-top">
-            <h3>Hybrid / EV Basics</h3>
-            <div class="tag">Safety + Basics</div>
-          </div>
-          <p class="card-text">
-            Hybrid/EV-ийн суурь ойлголт, өндөр хүчдэлийн аюулгүй ажиллагаа, basic оношлогоо.
-          </p>
-          <div class="card-meta">
-            <span>⏱ 2–6 долоо хоног</span>
-            <span>⚠️ Safety first</span>
-          </div>
-          <a class="btn btn-ghost" href="hybrid.html">Дэлгэрэнгүй</a>
-        </article>
-      </div>
-    </div>
-  </section>
+@media(max-width:980px){
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .grid.cards{grid-template-columns:1fr}
+  .hero-title{font-size:34px}
+  .nav{display:none}
+}
+/* ================================
+   CONTACT (Онлайн бүртгэл) UI polish
+   Paste at END of style.css
+   ================================ */
 
-  <!-- ABOUT -->
-  <section id="about" class="section section-alt">
-    <div class="container about-grid">
-      <div class="about-card">
-        <h2 class="section-title">Тухай</h2>
-        <p class="section-sub">
-          AutoScan Training Center нь “онол + бодит дадлага”-ыг хослуулж,
-          зөв хэмжилт, зөв оношилгооны workflow-оор сургадаг.
-        </p>
+/* Гарчиг ба зай */
+#contact .section-title{
+  margin: 0 0 10px;
+  letter-spacing: .2px;
+}
+#contact .contact-card{
+  padding: 20px;
+}
 
-        <div class="about-list">
-          <div class="about-item">
-            <div class="about-icon">⚡</div>
-            <div>
-              <b>Зөв хэмжилт</b>
-              <div class="muted">Voltage drop, ground, fuse/relay шалгалт</div>
-            </div>
-          </div>
-          <div class="about-item">
-            <div class="about-icon">🧠</div>
-            <div>
-              <b>Workflow</b>
-              <div class="muted">Алдаанаас онош руу системтэй хүрэх</div>
-            </div>
-          </div>
-          <div class="about-item">
-            <div class="about-icon">🛠️</div>
-            <div>
-              <b>Кейс</b>
-              <div class="muted">Бодит гэмтэл дээр шийдэл гаргана</div>
-            </div>
-          </div>
-        </div>
-      </div>
+/* Утас / Facebook / Хаяг — илүү цэгцтэй хүснэгт мэт */
+.contact-box{
+  margin-top: 12px;
+  padding: 14px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.18);
+}
 
-      <div class="about-card glow">
-        <h3 class="mini-title">Сургалтын үр дүн</h3>
-        <ul class="checklist">
-          <li>Цахилгааны гэмтлийг алхамчилж оношлох</li>
-          <li>DTC + live data-г зөв тайлбарлах</li>
-          <li>Wiring diagram дээр ажиллах чадвар</li>
-          <li>Төгсгөлд сертификат авах боломж</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+.contact-row{
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 6px;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.contact-row:last-child{ border-bottom: none; }
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="container contact-grid">
-      <div class="contact-card">
-        <h2 class="section-title">Онлайн бүртгэл</h2>
-      
+.contact-row .muted{
+  font-size: 13px;
+  letter-spacing: .2px;
+  color: var(--muted);
+}
 
-        <div class="contact-box">
-          <div class="contact-row"><span class="muted">Утас:</span> <b>9190 0084</b></div>
-          <div class="contact-row"><span class="muted">Facebook:</span> <b>AutoScan Training Center</b></div>
-          <div class="contact-row"><span class="muted">Хаяг:</span> <b>Улаанбаатар (шинээр бөглөнө)</b></div>
-        </div>
+.contact-row b{
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: .2px;
+  color: var(--text);
+}
 
-       
-        <!-- Course picker -->
-<div class="course-picker" id="coursePicker">
-  <div class="course-picker-title">Сургалтаа сонгоод бүртгүүлээрэй</div>
-  <div class="course-chips">
-    <button class="chip" type="button" data-course="Electrical Training">Electrical Training</button>
-    <button class="chip" type="button" data-course="Diagnostics Masterclass">Diagnostics Masterclass</button>
-    <button class="chip" type="button" data-course="ECU & CAN Training">ECU & CAN Training</button>
-    <button class="chip" type="button" data-course="Hybrid / EV Basics">Hybrid / EV Basics</button>
-  </div>
-  <div class="course-selected">
-    Сонгосон сургалт: <b id="selectedCourse">—</b>
-  </div>
-</div>
+/* Жижиг дэлгэц дээр мөрөөр нь буулгаж гоё харагдуулна */
+@media (max-width: 520px){
+  .contact-row{
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
 
-       <div class="iframe-wrap" id="regForm">
-  <iframe
-    title="AutoScan Registration"
-    src="https://docs.google.com/forms/d/e/1FAIpQLSfLnyZ7Z_KzzI7uaD9-wCF7rmhjGKAAoQqJJqq1DZvcgLdR3A/viewform?embedded=true"
-    loading="lazy"
-  ></iframe>
-</div>
+/* Course picker title — жижигхэн, гоё divider-тэй */
+.course-picker{
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.12);
+}
 
-      </div>
+.course-picker-title{
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.course-picker-title::after{
+  content:"";
+  height: 1px;
+  flex: 1;
+  background: rgba(255,255,255,.08);
+}
 
-      <div class="contact-card glow">
-        <h3 class="mini-title">Түгээмэл асуулт</h3>
-        <div class="faq">
-          <details>
-            <summary>Эхлэгч хүн орж болох уу?</summary>
-            <p>Тийм. Electrical сургалт сууриас эхэлнэ.</p>
-          </details>
-          <details>
-            <summary>Сертификат олгох уу?</summary>
-            <p>Хөтөлбөрийн шалгуур хангаж төгссөн тохиолдолд олгоно.</p>
-          </details>
-          <details>
-            <summary>Хэрэгсэл шаардлагатай юу?</summary>
-            <p>Multimeter байвал сайн. Танхим дээр мөн дадлага хийнэ.</p>
-          </details>
-        </div>
-      </div>
-    </div>
-  </section>
+/* Chips — текстийг жижигрүүлж, зай/мэдрэмжийг сайжруулна */
+.course-chips{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="muted">© <span id="year"></span> AutoScan Training Center</div>
-      <div class="footer-links">
-        <a href="#training">Сургалт</a>
-        <a href="#contact">Бүртгэл</a>
-      </div>
-    </div>
-  </footer>
+.chip{
+  font-size: 13px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.03);
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 800;
+  transition: .15s ease;
+}
+.chip:hover{
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,.20);
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+/* Active — neon цэнхэрээр */
+.chip.active{
+  background: rgba(var(--accent-rgb), .12);
+  border-color: rgba(var(--accent-rgb), .45);
+  box-shadow: 0 14px 45px rgba(var(--accent-rgb), .18);
+}
+
+/* Сонгосон сургалт мөр — цэвэрхэн */
+.course-selected{
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  color: var(--muted);
+  font-size: 13px;
+  display: flex;
+  gap: 8px;
+}
+#selectedCourse{
+  color: var(--accent);
+  font-weight: 900;
+}
+
+/* =========================================
+   GLOBAL BACKGROUND (Whole site) — CLEAN
+   (Replace everything below with this block)
+   ========================================= */
+
+/* Make sure your image exists here:
+   https://training.autoscan.mn/img/bg.jpeg
+   Repo path must be: /img/bg.jpeg  (case-sensitive)
+*/
+
+html, body { min-height: 100%; }
+
+body{
+  /* let the fixed pseudo-element show through */
+  background: transparent !important;
+  color: var(--text);
+  line-height: 1.55;
+  position: relative;
+}
+
+/* Fixed background image (does NOT move when scrolling) */
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+
+  background:
+    /* dark overlay (text readable) */
+    linear-gradient(180deg,
+      rgba(0,0,0,.70) 0%,
+      rgba(0,0,0,.82) 55%,
+      rgba(0,0,0,.90) 100%
+    ),
+    /* neon glow */
+    radial-gradient(900px 520px at 12% 8%, rgba(var(--accent-rgb), .18), transparent 60%),
+    radial-gradient(900px 520px at 88% 10%, rgba(var(--accent2-rgb), .10), transparent 62%),
+    /* background image */
+    url("/img/bg.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* vignette (edges darker) */
+body::after{
+  content:"";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  box-shadow: inset 0 0 170px rgba(0,0,0,.55);
+}
+
+/* Sections: keep them dark (avoid the white/grey “fog”) */
+.section-alt{
+  background: rgba(0,0,0,.18);
+  border-top: 1px solid rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+/* Cards: darker glass so background stays deep */
+.card,
+.about-card,
+.contact-card,
+.hero-card{
+  background: rgba(10,10,18,.58);
+  border: 1px solid rgba(255,255,255,.10);
+  backdrop-filter: blur(14px);
+}
+
+/* Mobile: fixed background can be heavy; this keeps it smooth */
+@media (max-width: 900px){
+  body::before, body::after{ position: fixed; }
+}
