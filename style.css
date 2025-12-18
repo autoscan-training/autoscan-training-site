@@ -487,3 +487,27 @@ body{
 @media (max-width: 900px){
   body{ background-attachment: scroll; }
 }
+/* ===== FIX: make background image show (paste at END of style.css) ===== */
+
+/* 1) RGB variables нэмнэ (rgba(var(--accent-rgb), a) ажиллана) */
+:root{
+  --accent-rgb: 0, 209, 255;   /* neon cyan */
+  --accent2-rgb: 0, 163, 255;  /* deep cyan */
+}
+
+/* 2) Body background image + overlay (force override) */
+body{
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.70) 0%, rgba(0,0,0,.80) 55%, rgba(0,0,0,.88) 100%),
+    radial-gradient(900px 520px at 12% 8%, rgba(var(--accent-rgb), .18), transparent 60%),
+    radial-gradient(900px 520px at 88% 10%, rgba(var(--accent2-rgb), .10), transparent 62%),
+    url("/img/bg.jpg") !important;  /* <-- чиний rename хийсэн зураг */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media (max-width: 900px){
+  body{ background-attachment: scroll; }
+}
