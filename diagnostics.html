@@ -1,43 +1,98 @@
 <!DOCTYPE html>
 <html lang="mn">
-
 <head>
-  <meta charset="UTF-8">
-  <title>Diagnostics Masterclass – AutoScan</title>
-  <meta name="description" content="Advanced diagnostics · Live data · Sensor logic.">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diagnostics Masterclass | AutoScan Training</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-dot"></span>
+      <span class="brand-text">AutoScan <b>Training</b></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="menu">☰</button>
+    <nav class="nav" id="nav">
+      <a href="index.html#training">Сургалт</a>
+      <a href="index.html#about">Тухай</a>
+      <a href="index.html#contact">Бүртгэл</a>
+    </nav>
+    <a class="btn btn-ghost" href="index.html#contact">Бүртгүүлэх</a>
+  </div>
+</header>
+
+<main class="page">
   <div class="container">
-
-    <h1>Diagnostics Masterclass</h1>
-    <p>Оношлогооны гүнзгий мастер сургалт.</p>
-
-    <h2 class="section-title">Агуулга</h2>
-    <ul class="course-list">
-      <li>Live data analysis</li>
-      <li>Wiring diagrams</li>
-      <li>Sensor simulation</li>
-      <li>Injector, ignition diagnostics</li>
-      <li>Case studies – бодит машин</li>
-    </ul>
-
-    <h2 class="section-title">Gallery</h2>
-    <div class="gallery">
-      <img src="img/diagnostics/1.jpg">
-      <img src="img/diagnostics/2.jpg">
-      <img src="img/diagnostics/3.jpg">
+    <div class="breadcrumb">
+      <a href="index.html">Нүүр</a> <span>›</span> <b>Diagnostics Masterclass</b>
     </div>
 
-    <h2 class="section-title">Бүртгэл</h2>
-    <a class="btn" href="tel:91900084">Утас</a>
-    <a class="btn-outline" href="index.html">Буцах</a>
+    <div class="page-hero">
+      <div>
+        <h1 class="page-title">Diagnostics Masterclass</h1>
+        <p class="page-sub">DTC + live data + workflow ашиглаж кейс шийдэх чадвар.</p>
+        <div class="page-actions">
+          <a class="btn btn-primary" href="index.html#contact">Онлайн бүртгүүлэх</a>
+          <a class="btn btn-soft" href="index.html#training">Бусад сургалт</a>
+        </div>
+      </div>
 
-    <footer>© AutoScan Training Center</footer>
+      <div class="info-card">
+        <div class="info-row"><span>Түвшин</span><b>Core</b></div>
+        <div class="info-row"><span>Хугацаа</span><b>4–8 долоо хоног</b></div>
+        <div class="info-row"><span>Хэлбэр</span><b>Case-based</b></div>
+        <div class="info-row"><span>Үнэ</span><b>(энд бичнэ)</b></div>
+      </div>
+    </div>
 
+    <section class="content-grid">
+      <div class="content-card">
+        <h2>Сурах зүйлс</h2>
+        <ul class="list">
+          <li>DTC унших → тайлбарлах → баталгаажуулах</li>
+          <li>Freeze frame / readiness / basic test plan</li>
+          <li>Live data-г “хэвийн утгатай” харьцуулах</li>
+          <li>Оношилгооны workflow: “таамаг” биш “нотолгоо”</li>
+          <li>Кейс: misfire, fuel trim, sensor errors, wiring issues</li>
+        </ul>
+      </div>
+
+      <div class="content-card">
+        <h2>Сурах үр дүн</h2>
+        <ul class="list">
+          <li>Scanner-аа зөв ашиглаж бодит онош гаргах</li>
+          <li>Live data-г ойлгож оношийн чиглэл тодруулах</li>
+          <li>“Солиж үзье” гэдгээс татгалзаж workflow-оор шийдэх</li>
+        </ul>
+
+        <div class="callout">
+          <b>Засварын чанар = workflow.</b>
+          <div class="muted">Алдаа бүр дээр ижил дараалалтай ажилладаг болно.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <h2>Бүртгэл</h2>
+      <p class="muted">Бүртгүүлэх бол доорх товч дээр дар.</p>
+      <a class="btn btn-primary" href="index.html#contact">Онлайн бүртгүүлэх</a>
+    </section>
   </div>
+</main>
 
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="muted">© <span id="year"></span> AutoScan Training Center</div>
+    <div class="footer-links">
+      <a href="index.html#training">Сургалт</a>
+      <a href="index.html#contact">Бүртгэл</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
