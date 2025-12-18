@@ -404,3 +404,70 @@ a{color:inherit;text-decoration:none}
   color: var(--accent);
   font-weight: 900;
 }
+/* =========================================
+   GLOBAL BACKGROUND (Whole site)
+   Paste at END of style.css
+   ========================================= */
+
+/* 1) Гол background: deep dark + neon cyan glow */
+html, body { height: 100%; }
+
+body{
+  background:
+    /* Top-left glow */
+    radial-gradient(900px 520px at 12% 8%, rgba(var(--accent-rgb), .22), transparent 60%),
+    /* Top-right soft glow */
+    radial-gradient(900px 520px at 88% 10%, rgba(var(--accent2-rgb), .14), transparent 62%),
+    /* Bottom center glow */
+    radial-gradient(900px 600px at 50% 110%, rgba(var(--accent-rgb), .10), transparent 60%),
+    /* Base gradient */
+    linear-gradient(180deg, #05060a 0%, #03040a 55%, #020207 100%);
+  background-attachment: fixed;
+}
+
+/* 2) Noise layer (маш зөөлөн) – илүү “premium” мэдрэмж өгнө */
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: .12;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(255,255,255,.02) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.015) 0 1px, transparent 1px 4px);
+  mix-blend-mode: overlay;
+}
+
+/* 3) Vignette (ирмэгүүдийг зөөлөн харанхуйруулна) */
+body::after{
+  content:"";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(1200px 800px at 50% 50%, transparent 55%, rgba(0,0,0,.55) 100%);
+}
+
+/* 4) Section-уудын дэвсгэр – илүү ялгаралттай болгох */
+.section{
+  position: relative;
+}
+
+.section-alt{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.03), rgba(255,255,255,.02));
+  border-top: 1px solid rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+/* 5) Кардуудын цаадах фон бага зэрэг илүү “glass” */
+.card,
+.about-card,
+.contact-card,
+.hero-card{
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.10);
+  backdrop-filter: blur(14px);
+}
