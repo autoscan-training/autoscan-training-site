@@ -109,34 +109,47 @@ a { color: inherit; text-decoration: none; transition: 0.2s; }
   border-color: var(--accent);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
-.btn:active { transform: translateY(0) scale(0.98); }
-
 .btn-primary {
   background: linear-gradient(135deg, var(--accent), #00b8cc);
   color: #05060a;
   border: none;
   box-shadow: 0 8px 25px rgba(0, 229, 255, 0.25);
 }
-.btn-primary:hover { 
-  box-shadow: 0 12px 35px rgba(0, 229, 255, 0.4); 
-  background: linear-gradient(135deg, var(--accent-soft), var(--accent));
+
+/* Sections & Cards */
+.section { padding: 60px 0; }
+.section-alt {
+  background: linear-gradient(180deg, transparent, rgba(0, 229, 255, 0.03), transparent);
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
 }
 
-/* Cards */
-.card {
+/* Бүх төрлийн "Box" буюу контейнерууд */
+.card, .info-card, .content-card, .about-card, .contact-card, .course-picker, .callout, .stat {
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: var(--card);
   padding: 24px;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
-  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
-.card:hover {
+
+.card:hover, .info-card:hover, .content-card:hover {
   border-color: var(--accent);
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 229, 255, 0.1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 229, 255, 0.05);
 }
+
+/* Stats */
+.stat { padding: 16px; text-align: center; background: rgba(0, 229, 255, 0.03); }
+.stat-num { font-weight: 900; font-size: 20px; color: var(--accent); }
+
+/* Row-based info boxes */
+.info-row, .contact-row {
+  display: flex; justify-content: space-between; gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.info-row:last-child, .contact-row:last-child { border-bottom: none; }
 
 /* Course Picker (Chips) */
 .chip {
@@ -149,10 +162,6 @@ a { color: inherit; text-decoration: none; transition: 0.2s; }
   font-weight: 600;
   transition: 0.25s;
 }
-.chip:hover {
-  border-color: var(--accent);
-  background: rgba(0, 229, 255, 0.05);
-}
 .chip.active {
   background: rgba(0, 229, 255, 0.15);
   border-color: var(--accent);
@@ -164,7 +173,6 @@ a { color: inherit; text-decoration: none; transition: 0.2s; }
 .badge {
   font-size: 11px; font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
   padding: 5px 12px; border-radius: 999px;
   background: rgba(0, 229, 255, 0.1);
   border: 1px solid rgba(0, 229, 255, 0.2);
@@ -189,11 +197,10 @@ a { color: inherit; text-decoration: none; transition: 0.2s; }
 .footer {
   padding: 60px 0 40px;
   border-top: 1px solid var(--border);
-  background: linear-gradient(to bottom, transparent, rgba(0,229,255,0.02));
 }
 
 /* Responsive */
 @media (max-width: 980px) {
   .hero-title { font-size: 32px; }
-  .btn { width: 100%; }
+  .grid.cards, .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
 }
