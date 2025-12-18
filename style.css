@@ -1,0 +1,93 @@
+/* AutoScan Training – Style */
+
+:root {
+  --bg-dark: #0b0e11;
+  --bg-card: #151a1f;
+  --accent: #00eaff;
+  --accent-soft: #66f9ff;
+  --text-main: #e8e8e8;
+  --text-muted: #9aa5b1;
+  --radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+.container {
+  width: 92%;
+  max-width: 1140px;
+  margin: auto;
+  padding: 50px 0 80px;
+}
+
+h1, h2 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.section-title {
+  margin: 40px 0 14px;
+  color: var(--accent);
+  text-transform: uppercase;
+  font-size: 22px;
+}
+
+.card {
+  background: var(--bg-card);
+  padding: 28px;
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+  border: 1px solid #1f2328;
+}
+
+.btn {
+  background: var(--accent);
+  color: #000;
+  padding: 12px 22px;
+  border-radius: var(--radius);
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 10px;
+  font-weight: 600;
+}
+.btn-outline {
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+}
+
+.hero-cta { margin: 25px 0; }
+
+.course-list li {
+  margin-bottom: 6px;
+}
+
+.gallery {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+.gallery img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid #2a2f33;
+}
+
+footer {
+  margin-top: 60px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+a { color: var(--accent-soft); }
