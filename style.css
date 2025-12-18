@@ -471,3 +471,19 @@ body::after{
   border: 1px solid rgba(255,255,255,.10);
   backdrop-filter: blur(14px);
 }
+/* ===== Site background image ===== */
+body{
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.70) 0%, rgba(0,0,0,.80) 55%, rgba(0,0,0,.88) 100%),
+    radial-gradient(900px 520px at 12% 8%, rgba(var(--accent-rgb), .18), transparent 60%),
+    radial-gradient(900px 520px at 88% 10%, rgba(var(--accent2-rgb), .10), transparent 62%),
+    url("img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media (max-width: 900px){
+  body{ background-attachment: scroll; }
+}
