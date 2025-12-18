@@ -497,16 +497,23 @@ body{
 
 /* 2) Body background image + overlay (force override) */
 body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   background:
+    /* dark overlay (уншихад) */
     linear-gradient(180deg, rgba(0,0,0,.70) 0%, rgba(0,0,0,.80) 55%, rgba(0,0,0,.88) 100%),
-    radial-gradient(900px 520px at 12% 8%, rgba(var(--accent-rgb), .18), transparent 60%),
-    radial-gradient(900px 520px at 88% 10%, rgba(var(--accent2-rgb), .10), transparent 62%),
-    url("/img/bg.jpg") !important;  /* <-- чиний rename хийсэн зураг */
+    /* neon glow */
+    radial-gradient(900px 500px at 15% 10%, rgba(var(--accent-rgb),.20), transparent 55%),
+    radial-gradient(900px 500px at 90% 10%, rgba(var(--accent2-rgb),.12), transparent 60%),
+    /* image */
+    url("img/bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  color:var(--text);
+  line-height:1.55;
 }
+
 @media (max-width: 900px){
   body{ background-attachment: scroll; }
 }
