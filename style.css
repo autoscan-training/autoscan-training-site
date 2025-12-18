@@ -6,7 +6,7 @@
   --muted:#a8a8b4;
   --border:#23233a;
 
-  --accent:#ff4fa6;
+  --accent:lab(84.07% -31.26 -24.7);
   --shadow: 0 18px 60px rgba(0,0,0,.45);
   --radius: 18px;
 }
@@ -15,8 +15,8 @@
 html,body{margin:0;padding:0}
 body{
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: radial-gradient(900px 500px at 15% 10%, rgba(255,79,166,.20), transparent 55%),
-              radial-gradient(900px 500px at 90% 10%, rgba(255,153,204,.12), transparent 60%),
+  background: radial-gradient(900px 500px at 15% 10%, rgba(79, 199, 255, 0.2), transparent 55%),
+              radial-gradient(900px 500px at 90% 10%, rgba(153, 235, 255, 0.12), transparent 60%),
               linear-gradient(180deg, var(--bg), #030307 70%);
   color: var(--text);
   line-height: 1.55;
@@ -82,7 +82,7 @@ a{color:inherit;text-decoration:none}
 }
 .btn:hover{transform: translateY(-1px); border-color: rgba(255,255,255,.18)}
 .btn-primary{
-  background: linear-gradient(135deg, var(--accent), #ff2f8f);
+  background: linear-gradient(135deg, var(--accent), #2fffff);
   border-color: rgba(255,255,255,.10);
   box-shadow: 0 12px 40px rgba(255,79,166,.25);
 }
@@ -187,7 +187,7 @@ a{color:inherit;text-decoration:none}
 }
 .card{
   border-radius: var(--radius);
-  border:1px solid rgba(255,255,255,.10);
+  border:1px solid rgba(255, 255, 255, 0.308);
   background: rgba(255,255,255,.03);
   padding:16px;
   box-shadow: 0 14px 45px rgba(0,0,0,.35);
@@ -377,4 +377,3 @@ a{color:inherit;text-decoration:none}
   margin-top:10px;
   color: var(--muted);
 }
-
