@@ -243,9 +243,28 @@
         <div class="embed-hint">
           <b>Google Form нэмэх:</b> Form → Send → <> Embed HTML → src холбоосыг аваад доорх iframe-ийн src-г солино.
         </div>
-         <div class="iframe-wrap">
-          <iframe title="AutoScan Registration" src="https://docs.google.com/forms/d/e/1FAIpQLSfLnyZ7Z_KzzI7uaD9-wCF7rmhjGKAAoQqJJqq1DZvcgLdR3A/viewform?embedded=true" ></iframe>
-        </div>
+        <!-- Course picker -->
+<div class="course-picker" id="coursePicker">
+  <div class="course-picker-title">Сургалтаа сонгоод бүртгүүлээрэй</div>
+  <div class="course-chips">
+    <button class="chip" type="button" data-course="Electrical Training">Electrical Training</button>
+    <button class="chip" type="button" data-course="Diagnostics Masterclass">Diagnostics Masterclass</button>
+    <button class="chip" type="button" data-course="ECU & CAN Training">ECU & CAN Training</button>
+    <button class="chip" type="button" data-course="Hybrid / EV Basics">Hybrid / EV Basics</button>
+  </div>
+  <div class="course-selected">
+    Сонгосон сургалт: <b id="selectedCourse">—</b>
+  </div>
+</div>
+
+       <div class="iframe-wrap" id="regForm">
+  <iframe
+    title="AutoScan Registration"
+    src="https://docs.google.com/forms/d/e/1FAIpQLSfLnyZ7Z_KzzI7uaD9-wCF7rmhjGKAAoQqJJqq1DZvcgLdR3A/viewform?embedded=true"
+    loading="lazy"
+  ></iframe>
+</div>
+
       </div>
 
       <div class="contact-card glow">
