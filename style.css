@@ -279,3 +279,128 @@ a{color:inherit;text-decoration:none}
   .hero-title{font-size:34px}
   .nav{display:none}
 }
+/* ================================
+   CONTACT (Онлайн бүртгэл) UI polish
+   Paste at END of style.css
+   ================================ */
+
+/* Гарчиг ба зай */
+#contact .section-title{
+  margin: 0 0 10px;
+  letter-spacing: .2px;
+}
+#contact .contact-card{
+  padding: 20px;
+}
+
+/* Утас / Facebook / Хаяг — илүү цэгцтэй хүснэгт мэт */
+.contact-box{
+  margin-top: 12px;
+  padding: 14px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.18);
+}
+
+.contact-row{
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 6px;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.contact-row:last-child{ border-bottom: none; }
+
+.contact-row .muted{
+  font-size: 13px;
+  letter-spacing: .2px;
+  color: var(--muted);
+}
+
+.contact-row b{
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: .2px;
+  color: var(--text);
+}
+
+/* Жижиг дэлгэц дээр мөрөөр нь буулгаж гоё харагдуулна */
+@media (max-width: 520px){
+  .contact-row{
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
+
+/* Course picker title — жижигхэн, гоё divider-тэй */
+.course-picker{
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.12);
+}
+
+.course-picker-title{
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.course-picker-title::after{
+  content:"";
+  height: 1px;
+  flex: 1;
+  background: rgba(255,255,255,.08);
+}
+
+/* Chips — текстийг жижигрүүлж, зай/мэдрэмжийг сайжруулна */
+.course-chips{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip{
+  font-size: 13px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.03);
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 800;
+  transition: .15s ease;
+}
+.chip:hover{
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,.20);
+}
+
+/* Active — neon цэнхэрээр */
+.chip.active{
+  background: rgba(var(--accent-rgb), .12);
+  border-color: rgba(var(--accent-rgb), .45);
+  box-shadow: 0 14px 45px rgba(var(--accent-rgb), .18);
+}
+
+/* Сонгосон сургалт мөр — цэвэрхэн */
+.course-selected{
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  color: var(--muted);
+  font-size: 13px;
+  display: flex;
+  gap: 8px;
+}
+#selectedCourse{
+  color: var(--accent);
+  font-weight: 900;
+}
