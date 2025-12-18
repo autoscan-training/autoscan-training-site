@@ -435,9 +435,9 @@ body::before{
   background:
     /* dark overlay (text readable) */
     linear-gradient(180deg,
-      rgba(0,0,0,.70) 0%,
-      rgba(0,0,0,.82) 55%,
-      rgba(0,0,0,.90) 100%
+      rgba(0,0,0,.45) 0%,
+      rgba(0,0,0,.58) 55%,
+      rgba(0,0,0,.70) 100%
     ),
     /* neon glow */
     radial-gradient(900px 520px at 12% 8%, rgba(var(--accent-rgb), .18), transparent 60%),
