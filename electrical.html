@@ -1,42 +1,99 @@
 <!DOCTYPE html>
 <html lang="mn">
 <head>
-  <meta charset="UTF-8">
-  <title>Electrical Level 1–3 – AutoScan</title>
-  <meta name="description" content="Oscilloscope, датчик, CAN bus, оношлогооны сургалт.">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Electrical Training | AutoScan Training</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-dot"></span>
+      <span class="brand-text">AutoScan <b>Training</b></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="menu">☰</button>
+    <nav class="nav" id="nav">
+      <a href="index.html#training">Сургалт</a>
+      <a href="index.html#about">Тухай</a>
+      <a href="index.html#contact">Бүртгэл</a>
+    </nav>
+    <a class="btn btn-ghost" href="index.html#contact">Бүртгүүлэх</a>
+  </div>
+</header>
+
+<main class="page">
   <div class="container">
-
-    <h1>Electrical Level 1–3</h1>
-    <p>Цахилгаан системийн суурь → ахисан түвшний бодит сургалт.</p>
-
-    <h2 class="section-title">Агуулга</h2>
-    <ul class="course-list">
-      <li>Осиллоскоп суурь</li>
-      <li>Датчик шинжилгээ</li>
-      <li>CAN bus үндэс</li>
-      <li>Ground fault diagnostics</li>
-      <li>Wiring схем унших</li>
-    </ul>
-
-    <h2 class="section-title">Gallery</h2>
-    <div class="gallery">
-      <img src="img/electrical/1.jpg">
-      <img src="img/electrical/2.jpg">
-      <img src="img/electrical/3.jpg">
+    <div class="breadcrumb">
+      <a href="index.html">Нүүр</a> <span>›</span> <b>Electrical Training</b>
     </div>
 
-    <h2 class="section-title">Бүртгэл</h2>
-    <p>Утас: <strong>91900084</strong></p>
-    <a class="btn" href="tel:91900084">Холбогдох</a>
-    <a class="btn-outline" href="index.html">Буцах</a>
+    <div class="page-hero">
+      <div>
+        <h1 class="page-title">Electrical Training</h1>
+        <p class="page-sub">Суурь цахилгаан ойлголт → зөв хэмжилт → гэмтэл хайх практик.</p>
+        <div class="page-actions">
+          <a class="btn btn-primary" href="index.html#contact">Онлайн бүртгүүлэх</a>
+          <a class="btn btn-soft" href="index.html#training">Бусад сургалт</a>
+        </div>
+      </div>
 
-    <footer>© AutoScan Training Center</footer>
+      <div class="info-card">
+        <div class="info-row"><span>Түвшин</span><b>Beginner → Intermediate</b></div>
+        <div class="info-row"><span>Хугацаа</span><b>4–8 долоо хоног</b></div>
+        <div class="info-row"><span>Хэлбэр</span><b>Танхим + дадлага</b></div>
+        <div class="info-row"><span>Үнэ</span><b>(энд бичнэ)</b></div>
+      </div>
+    </div>
 
+    <section class="content-grid">
+      <div class="content-card">
+        <h2>Сурах зүйлс</h2>
+        <ul class="list">
+          <li>V / I / R / P суурь ойлголт</li>
+          <li>Multimeter зөв ашиглалт (voltage, ohm, continuity)</li>
+          <li>Fuse / relay / ground шалгах</li>
+          <li>Voltage drop test (алдаа хурдан олох)</li>
+          <li>Wiring diagram унших суурь</li>
+          <li>Бодит кейс: асахгүй, богино холболт, тасархай хэлхээ</li>
+        </ul>
+      </div>
+
+      <div class="content-card">
+        <h2>Хэнд тохирох вэ?</h2>
+        <ul class="list">
+          <li>Цахилгаан сууриасаа эхэлж сурах хүн</li>
+          <li>Засвар дээр хэмжилт “таамгаар” хийдэг байсан хүн</li>
+          <li>Wiring diagram ойлгохыг хүссэн хүн</li>
+        </ul>
+
+        <div class="callout">
+          <b>Зөв хэмжилт = цаг хэмнэлт.</b>
+          <div class="muted">Хэмжилтийн жижиг алдаанаас олон саяын модуль шатах эрсдэл буурна.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <h2>Бүртгэл</h2>
+      <p class="muted">Бүртгүүлэх бол доорх товч дээр дарж нүүрний бүртгэлийн хэсэг рүү орно.</p>
+      <a class="btn btn-primary" href="index.html#contact">Онлайн бүртгүүлэх</a>
+    </section>
   </div>
+</main>
 
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="muted">© <span id="year"></span> AutoScan Training Center</div>
+    <div class="footer-links">
+      <a href="index.html#training">Сургалт</a>
+      <a href="index.html#contact">Бүртгэл</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
