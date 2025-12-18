@@ -1,60 +1,285 @@
 <!DOCTYPE html>
 <html lang="mn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AutoScan Training Center</title>
-
-    <meta name="description" content="Автомашины оношлогоо, цахилгаан, ECU & CAN, Hybrid системийн мэргэшлийн сургалт.">
-
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon-32x32.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AutoScan Training Center</title>
+  <meta name="description" content="AutoScan Training Center – Автомашины цахилгаан, оношлогоо, ECU & CAN сургалт" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<header>
-    <h1>AUTOSCAN TRAINING CENTER</h1>
-    <p>Гараж дээр бодит туршлага дээр суурилсан мэргэшлийн сургалтууд.</p>
-</header>
+  <!-- HEADER -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-dot"></span>
+        <span class="brand-text">AutoScan <b>Training</b></span>
+      </a>
 
-<section class="training-grid">
+      <button class="nav-toggle" id="navToggle" aria-label="menu">☰</button>
 
-    <div class="train-card">
-        <img src="img/electrical/thumb.jpg" alt="Electrical Training">
-        <h2>Electrical Level 1-3</h2>
-        <p>CAN bus, wiring, датчик, осциллоскоп, оношлогоо.</p>
-        <a class="btn" href="electrical.html">Дэлгэрэнгүй</a>
+      <nav class="nav" id="nav">
+        <a href="#training">Сургалт</a>
+        <a href="#about">Тухай</a>
+        <a href="#contact">Бүртгэл</a>
+      </nav>
+
+      <a class="btn btn-ghost" href="#contact">Холбогдох</a>
     </div>
+  </header>
 
-    <div class="train-card">
-        <img src="img/diagnostics/thumb.jpg" alt="Diagnostics">
-        <h2>Diagnostics Masterclass</h2>
-        <p>Waveform analysis, wiring diagram, advanced diagnostics.</p>
-        <a class="btn" href="diagnostics.html">Дэлгэрэнгүй</a>
+  <!-- HERO -->
+  <main class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <div class="pill">
+          <span class="pill-dot"></span>
+          Бодит гараж дээр суурилсан сургалт
+        </div>
+
+        <h1 class="hero-title">
+          Автомашины <span class="accent">цахилгаан</span>, <span class="accent">оношлогоо</span>,
+          <span class="accent">ECU & CAN</span>-ийг ойлгомжтой, бодитоор суръя
+        </h1>
+
+        <p class="hero-sub">
+          Эхлэгч хүн ч ойлгохоор — алхамчилсан тайлбар + дадлага + кейс дээр суурилсан аргачлал.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#training">Сургалтууд үзэх</a>
+          <a class="btn btn-soft" href="#contact">Онлайн бүртгүүлэх</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-num">4</div>
+            <div class="stat-txt">Сургалтын төрөл</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">Hands-on</div>
+            <div class="stat-txt">Бодит дадлага</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">Certificate</div>
+            <div class="stat-txt">Сертификат</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <div class="badge">NEW</div>
+            <div class="badge ghost">2025</div>
+          </div>
+
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">training-plan.log</span>
+            </div>
+            <pre class="terminal-body">
+[OK] Суурь хэмжилт + аюулгүй ажиллагаа
+[OK] Wiring diagram унших
+[OK] DTC + Live data workflow
+[OK] CAN ойлголтын суурь
+[OK] ECU & CAN практик (зөв хэрэглээ)
+            </pre>
+          </div>
+
+          <div class="hero-note">
+            <div class="hero-note-title">Яагаад AutoScan?</div>
+            <ul class="checklist">
+              <li>Алхамчилсан ойлгомжтой тайлбар</li>
+              <li>Бодит кейс дээр шийдэл гаргана</li>
+              <li>Хэмжилтийн зөв дадлыг суулгана</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
+  </main>
 
-    <div class="train-card">
-        <img src="img/ecu/thumb.jpg" alt="ECU CAN">
-        <h2>ECU & CAN Training</h2>
-        <p>ECU coding, adaptation, CAN sniffing & flash programming.</p>
-        <a class="btn" href="ecu-can.html">Дэлгэрэнгүй</a>
+  <!-- TRAINING -->
+  <section id="training" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">Сургалтын хөтөлбөрүүд</h2>
+          <p class="section-sub">Карт дээр дарж дэлгэрэнгүй хуудсаар орно.</p>
+        </div>
+      </div>
+
+      <div class="grid cards">
+        <article class="card">
+          <div class="card-top">
+            <h3>Electrical Training</h3>
+            <div class="tag">Beginner → Intermediate</div>
+          </div>
+          <p class="card-text">
+            Суурь цахилгаан ойлголт, multimeter зөв ашиглалт, гэмтэл хайх үндсэн аргачлал.
+          </p>
+          <div class="card-meta">
+            <span>⏱ 4–8 долоо хоног</span>
+            <span>📍 Танхим + дадлага</span>
+          </div>
+          <a class="btn btn-ghost" href="electrical.html">Дэлгэрэнгүй</a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <h3>Diagnostics Masterclass</h3>
+            <div class="tag">Core</div>
+          </div>
+          <p class="card-text">
+            DTC зөв унших, live data тайлбарлах, оношилгооны workflow-оор кейс шийдэх.
+          </p>
+          <div class="card-meta">
+            <span>⏱ 4–8 долоо хоног</span>
+            <span>🧠 Case-based</span>
+          </div>
+          <a class="btn btn-ghost" href="diagnostics.html">Дэлгэрэнгүй</a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <h3>ECU & CAN Training</h3>
+            <div class="tag">Advanced</div>
+          </div>
+          <p class="card-text">
+            CAN суурь ойлголт, сүлжээний оношилгоо, ECU бүтэц/логик (аюулгүй, зөв хэрэглээ).
+          </p>
+          <div class="card-meta">
+            <span>⏱ 6–10 долоо хоног</span>
+            <span>🧩 Lab</span>
+          </div>
+          <a class="btn btn-ghost" href="ecu-can.html">Дэлгэрэнгүй</a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <h3>Hybrid / EV Basics</h3>
+            <div class="tag">Safety + Basics</div>
+          </div>
+          <p class="card-text">
+            Hybrid/EV-ийн суурь ойлголт, өндөр хүчдэлийн аюулгүй ажиллагаа, basic оношлогоо.
+          </p>
+          <div class="card-meta">
+            <span>⏱ 2–6 долоо хоног</span>
+            <span>⚠️ Safety first</span>
+          </div>
+          <a class="btn btn-ghost" href="hybrid.html">Дэлгэрэнгүй</a>
+        </article>
+      </div>
     </div>
+  </section>
 
-    <div class="train-card">
-        <img src="img/hybrid/thumb.jpg" alt="Hybrid">
-        <h2>Hybrid System</h2>
-        <p>High voltage, inverter, MG1 MG2, батарей оношлогоо.</p>
-        <a class="btn" href="hybrid.html">Дэлгэрэнгүй</a>
+  <!-- ABOUT -->
+  <section id="about" class="section section-alt">
+    <div class="container about-grid">
+      <div class="about-card">
+        <h2 class="section-title">Тухай</h2>
+        <p class="section-sub">
+          AutoScan Training Center нь “онол + бодит дадлага”-ыг хослуулж,
+          зөв хэмжилт, зөв оношилгооны workflow-оор сургадаг.
+        </p>
+
+        <div class="about-list">
+          <div class="about-item">
+            <div class="about-icon">⚡</div>
+            <div>
+              <b>Зөв хэмжилт</b>
+              <div class="muted">Voltage drop, ground, fuse/relay шалгалт</div>
+            </div>
+          </div>
+          <div class="about-item">
+            <div class="about-icon">🧠</div>
+            <div>
+              <b>Workflow</b>
+              <div class="muted">Алдаанаас онош руу системтэй хүрэх</div>
+            </div>
+          </div>
+          <div class="about-item">
+            <div class="about-icon">🛠️</div>
+            <div>
+              <b>Кейс</b>
+              <div class="muted">Бодит гэмтэл дээр шийдэл гаргана</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-card glow">
+        <h3 class="mini-title">Сургалтын үр дүн</h3>
+        <ul class="checklist">
+          <li>Цахилгааны гэмтлийг алхамчилж оношлох</li>
+          <li>DTC + live data-г зөв тайлбарлах</li>
+          <li>Wiring diagram дээр ажиллах чадвар</li>
+          <li>Төгсгөлд сертификат авах боломж</li>
+        </ul>
+      </div>
     </div>
+  </section>
 
-</section>
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container contact-grid">
+      <div class="contact-card">
+        <h2 class="section-title">Онлайн бүртгэл</h2>
+        <p class="section-sub">
+          Google Form бэлэн бол embed холбоосоо тавина. Одоохондоо холбоо барих мэдээлэл байна.
+        </p>
 
-<footer>
-    <p>📞 Утас: 91900084</p>
-</footer>
+        <div class="contact-box">
+          <div class="contact-row"><span class="muted">Утас:</span> <b>9190 0084</b></div>
+          <div class="contact-row"><span class="muted">Facebook:</span> <b>AutoScan Training Center</b></div>
+          <div class="contact-row"><span class="muted">Хаяг:</span> <b>Улаанбаатар (шинээр бөглөнө)</b></div>
+        </div>
 
+        <div class="embed-hint">
+          <b>Google Form нэмэх:</b> Form → Send → <> Embed HTML → src холбоосыг аваад доорх iframe-ийн src-г солино.
+        </div>
+
+        <div class="iframe-wrap">
+          <iframe title="AutoScan Registration" src="about:blank" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <div class="contact-card glow">
+        <h3 class="mini-title">Түгээмэл асуулт</h3>
+        <div class="faq">
+          <details>
+            <summary>Эхлэгч хүн орж болох уу?</summary>
+            <p>Тийм. Electrical сургалт сууриас эхэлнэ.</p>
+          </details>
+          <details>
+            <summary>Сертификат олгох уу?</summary>
+            <p>Хөтөлбөрийн шалгуур хангаж төгссөн тохиолдолд олгоно.</p>
+          </details>
+          <details>
+            <summary>Хэрэгсэл шаардлагатай юу?</summary>
+            <p>Multimeter байвал сайн. Танхим дээр мөн дадлага хийнэ.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="muted">© <span id="year"></span> AutoScan Training Center</div>
+      <div class="footer-links">
+        <a href="#training">Сургалт</a>
+        <a href="#contact">Бүртгэл</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
