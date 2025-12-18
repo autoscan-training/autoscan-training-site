@@ -82,7 +82,8 @@ a{color:inherit;text-decoration:none}
 }
 .btn:hover{transform: translateY(-1px); border-color: rgba(255,255,255,.18)}
 .btn-primary{
-  background: linear-gradient(135deg, var(--accent), #ff2f8f);
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+
   border-color: rgba(255,255,255,.10);
   box-shadow: 0 12px 40px rgba(255,79,166,.25);
 }
