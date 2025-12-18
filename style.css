@@ -516,6 +516,31 @@ body{
   color:var(--text);
   line-height:1.55;
 }
+/* ===== FINAL OVERRIDE: Background image ===== */
+html, body { min-height: 100%; }
+
+body{
+  background:
+    /* overlay (тунгалаг байх ёстой) */
+    linear-gradient(180deg,
+      rgba(5,5,9,.55) 0%,
+      rgba(5,5,9,.78) 55%,
+      rgba(5,5,9,.90) 100%
+    ),
+    /* neon glow */
+    radial-gradient(900px 520px at 12% 8%, rgba(var(--accent-rgb), .18), transparent 60%),
+    radial-gradient(900px 520px at 88% 10%, rgba(var(--accent2-rgb), .10), transparent 62%),
+    /* image */
+    url("/img/bg.jpeg") !important;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+@media (max-width: 900px){
+  body{ background-attachment: scroll; }
+}
 
 @media (max-width: 900px){
   body{ background-attachment: scroll; }
