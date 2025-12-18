@@ -507,7 +507,6 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-
 @media (max-width: 900px){
   body{ background-attachment: scroll; }
 }
