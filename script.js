@@ -17,3 +17,24 @@ if (navToggle && nav) {
   });
 }
 
+// Course picker -> select + scroll to form
+const chips = document.querySelectorAll(".chip");
+const selectedCourseEl = document.getElementById("selectedCourse");
+const regForm = document.getElementById("regForm");
+
+chips.forEach(chip => {
+  chip.addEventListener("click", () => {
+    // active style
+    chips.forEach(c => c.classList.remove("active"));
+    chip.classList.add("active");
+
+    // show selected
+    const course = chip.dataset.course || "—";
+    if (selectedCourseEl) selectedCourseEl.textContent = course;
+
+    // smooth scroll to form
+    if (regForm) {
+      regForm.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+});
