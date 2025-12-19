@@ -1,1 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://training.autoscan.mn/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url><loc>https://training.autoscan.mn/index.html</loc></url>
+  <url><loc>https://training.autoscan.mn/diagnostics.html</loc></url>
+  <url><loc>https://training.autoscan.mn/ecu-can.html</loc></url>
+  <url><loc>https://training.autoscan.mn/electrical.html</loc></url>
+  <url><loc>https://training.autoscan.mn/hybrid.html</loc></url>
+</urlset>
 
