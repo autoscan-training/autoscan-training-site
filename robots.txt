@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://training.autoscan.mn/sitemap.xml
