@@ -531,3 +531,14 @@ body::after{
 .card h3, .card h2{
   color: var(--accent);
 }
+/* ===== Course card titles: neon cyan ===== */
+.card-top h3,
+.card h3{
+  color: var(--accent) !important;
+  text-shadow: 0 0 18px rgba(var(--accent-rgb), .35);
+}
+
+/* (сонголт) hover дээр бүр илүү “neon” */
+.card:hover .card-top h3{
+  text-shadow: 0 0 26px rgba(var(--accent-rgb), .55);
+}
