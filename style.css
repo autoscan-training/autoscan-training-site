@@ -501,3 +501,21 @@ body::after{
 @media (max-width: 520px){
   .iframe-wrap iframe{ height: 1800px; }
 }
+/* ===== "Дэлгэрэнгүй" товч hover — neon cyan ===== */
+.card .btn:not(.btn-primary):hover{
+  background: rgba(var(--accent-rgb), .16);
+  border-color: rgba(var(--accent-rgb), .65);
+  color: #fff;
+  box-shadow:
+    0 0 0 1px rgba(var(--accent-rgb), .15),
+    0 16px 55px rgba(var(--accent-rgb), .28);
+}
+
+/* keyboard focus (Tab) үед бас neon байг */
+.card .btn:not(.btn-primary):focus-visible{
+  outline: none;
+  border-color: rgba(var(--accent-rgb), .75);
+  box-shadow:
+    0 0 0 3px rgba(var(--accent-rgb), .22),
+    0 18px 60px rgba(var(--accent-rgb), .25);
+}
