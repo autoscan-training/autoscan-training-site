@@ -3,97 +3,223 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ECU & CAN Training | AutoScan Training</title>
+  <title>ECU & CAN Training – AutoScan Training</title>
+  <meta name="description" content="ECU & CAN Training – CAN ойлголт, сүлжээний оношилгоо, wiring/termination шалгалт, ECU бүтэц (аюулгүй, зөв хэрэглээ)." />
+
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <meta name="theme-color" content="#00d1ff">
 </head>
+
 <body>
 
-<header class="topbar">
-  <div class="container topbar-inner">
-    <a class="brand" href="index.html">
-      <span class="brand-dot"></span>
-      <span class="brand-text">AutoScan <b>Training</b></span>
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="menu">☰</button>
-    <nav class="nav" id="nav">
-      <a href="index.html#training">Сургалт</a>
-      <a href="index.html#about">Тухай</a>
-      <a href="index.html#contact">Бүртгэл</a>
-    </nav>
-    <a class="btn btn-ghost" href="index.html#contact">Бүртгүүлэх</a>
-  </div>
-</header>
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-dot"></span>
+        <span class="brand-text">AutoScan Training</span>
+      </a>
 
-<main class="page">
-  <div class="container">
-    <div class="breadcrumb">
-      <a href="index.html">Нүүр</a> <span>›</span> <b>ECU & CAN Training</b>
+      <nav class="nav">
+        <a href="index.html#training">Сургалтууд</a>
+        <a href="index.html#about">Тухай</a>
+        <a href="index.html#contact">Бүртгэл</a>
+      </nav>
+
+      <a class="btn btn-soft" href="index.html#training">⬅ Буцах</a>
     </div>
+  </header>
 
-    <div class="page-hero">
-      <div>
-        <h1 class="page-title">ECU & CAN Training</h1>
-        <p class="page-sub">CAN ойлголт + сүлжээний оношилгоо + ECU бүтэц (аюулгүй, зөв хэрэглээ).</p>
-        <div class="page-actions">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <div class="pill">
+          <span class="pill-dot"></span>
+          <span>Advanced • Lab + Practice • Safe Use</span>
+        </div>
+
+        <h1 class="hero-title">ECU &amp; CAN Training</h1>
+        <p class="hero-sub">
+          CAN ойлголт → network оношилгоо → wiring/termination шалгах → fault тусгаарлах.
+          Мөн ECU бүтэц (flash/EEPROM) болон өгөгдөл/логийг зөв тайлбарлах суурь дадлага.
+          <b>Зөв, аюулгүй хэрэглээнд төвлөрнө.</b>
+        </p>
+
+        <div class="hero-actions">
           <a class="btn btn-primary" href="index.html#contact">Онлайн бүртгүүлэх</a>
           <a class="btn btn-soft" href="index.html#training">Бусад сургалт</a>
         </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-num">Network Diagnostics</div>
+            <div class="stat-txt">Wiring / Termination</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">CAN Basics</div>
+            <div class="stat-txt">Frame / ID / Bitrate</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">ECU Structure</div>
+            <div class="stat-txt">Flash / EEPROM (суурь)</div>
+          </div>
+        </div>
       </div>
 
-      <div class="info-card">
-        <div class="info-row"><span>Түвшин</span><b>Advanced</b></div>
-        <div class="info-row"><span>Хугацаа</span><b>6–10 долоо хоног</b></div>
-        <div class="info-row"><span>Хэлбэр</span><b>Lab + тайлбар</b></div>
-        <div class="info-row"><span>Үнэ</span><b>(энд бичнэ)</b></div>
-      </div>
-    </div>
-
-    <section class="content-grid">
-      <div class="content-card">
-        <h2>Сурах зүйлс</h2>
-        <ul class="list">
-          <li>CAN frame / ID / bitrate ойлголтын түвшинд</li>
-          <li>Сүлжээний wiring ба termination шалгах</li>
-          <li>Common network faults: open/short/termination issue</li>
-          <li>ECU бүтэц: flash/EEPROM ойлголт (суурь)</li>
-          <li>Лог/өгөгдөл дээр зөв тайлбар хийх</li>
-        </ul>
-      </div>
-
-      <div class="content-card">
-        <h2>Анхааруулга</h2>
-        <div class="callout">
-          <b>Энэ сургалт зөв, аюулгүй хэрэглээнд төвлөрнө.</b>
-          <div class="muted">Хамгаалалт тойрох, хууль зөрчих, буруу ашиглах аргачлал орохгүй.</div>
+      <aside class="hero-card">
+        <div class="hero-card-top">
+          <span class="badge">ECU</span>
+          <span class="badge ghost">CAN</span>
         </div>
 
-        <h2 style="margin-top:14px;">Сурах үр дүн</h2>
-        <ul class="list">
-          <li>CAN асуудлыг wiring + хэмжилтээр оношлох</li>
-          <li>Network fault-ыг системтэй тусгаарлах</li>
-          <li>ECU ойлголтоо нэг шат ахиулах</li>
-        </ul>
-      </div>
-    </section>
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="terminal-title">Training Outline</span>
+          </div>
+          <pre class="terminal-body">• CAN ойлголт: frame / ID / bitrate / bus load
+• Wiring + termination шалгах стандарт
+• Common faults: open / short / ground / termination
+• Fault isolation workflow (алхамчилсан)
+• Log / data тайлбарлах (өөрчлөлт, хэвийн утга)
+• ECU суурь бүтэц: flash/EEPROM ойлголт (зөв хэрэглээ)</pre>
+        </div>
 
-    <section class="content-card">
-      <h2>Бүртгэл</h2>
-      <p class="muted">Бүртгүүлэх бол доорх товч дээр дар.</p>
-      <a class="btn btn-primary" href="index.html#contact">Онлайн бүртгүүлэх</a>
-    </section>
-  </div>
-</main>
-
-<footer class="footer">
-  <div class="container footer-inner">
-    <div class="muted">© <span id="year"></span> AutoScan Training Center</div>
-    <div class="footer-links">
-      <a href="index.html#training">Сургалт</a>
-      <a href="index.html#contact">Бүртгэл</a>
+        <div class="hero-note">
+          <div class="hero-note-title">Анхааруулга</div>
+          <ul class="checklist">
+            <li>Энэ сургалт нь зөв, аюулгүй хэрэглээнд төвлөрнө.</li>
+            <li>Хамгаалалт тойрох, хууль зөрчих, буруу ашиглах аргачлал орохгүй.</li>
+            <li>Оношлогоо + хэмжилт дээр суурилсан ур чадварыг хөгжүүлнэ.</li>
+          </ul>
+        </div>
+      </aside>
     </div>
-  </div>
-</footer>
+  </section>
 
-<script src="script.js"></script>
+  <!-- CONTENT -->
+  <section class="section section-alt">
+    <div class="container about-grid">
+
+      <div class="about-card glow">
+        <h2 class="section-title">Юу сурах вэ?</h2>
+        <p class="section-sub">
+          CAN сүлжээний асуудлыг “таамаг”-аар биш хэмжилт + логик дарааллаар тусгаарлаж,
+          алдааны шалтгаанд хурдан хүрэх workflow эзэмшинэ.
+        </p>
+
+        <div class="about-list">
+          <div class="about-item">
+            <div class="about-icon">🛰️</div>
+            <div>
+              <b>CAN суурь ойлголт</b>
+              <div class="muted">Frame, ID, bitrate, arbitration, network topology.</div>
+            </div>
+          </div>
+
+          <div class="about-item">
+            <div class="about-icon">🧰</div>
+            <div>
+              <b>Wiring & termination шалгах</b>
+              <div class="muted">60Ω ойлголт, splice/connector шалгалт, ground/power basics.</div>
+            </div>
+          </div>
+
+          <div class="about-item">
+            <div class="about-icon">🧭</div>
+            <div>
+              <b>Fault isolation</b>
+              <div class="muted">Open/short/termination issue-г системтэй тусгаарлах алхам.</div>
+            </div>
+          </div>
+
+          <div class="about-item">
+            <div class="about-icon">📈</div>
+            <div>
+              <b>Өгөгдөл ба лог тайлбарлах</b>
+              <div class="muted">Алдааны үед ямар өөрчлөлт гардаг вэ гэдгийг зөв уншиж ойлгох.</div>
+            </div>
+          </div>
+
+          <div class="about-item">
+            <div class="about-icon">🧠</div>
+            <div>
+              <b>ECU бүтэц (суурь)</b>
+              <div class="muted">Flash/EEPROM ялгаа, мэдээлэл хэрхэн хадгалагддаг тухай ойлголт.</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px">
+          <a class="btn btn-primary" href="index.html#contact">Бүртгүүлэх</a>
+          <a class="btn btn-ghost" href="index.html#training" style="margin-left:10px">Сургалтууд руу</a>
+        </div>
+      </div>
+
+      <div class="about-card">
+        <h2 class="section-title">Хөтөлбөр</h2>
+        <p class="muted" style="margin-top:6px">
+          (Жишиг бүтэц — таны ажиллаж буй брэнд/тохиолдолд тааруулж кейс нэмнэ.)
+        </p>
+
+        <ul class="checklist" style="margin-top:12px">
+          <li>CAN network суурь ойлголт (frame/ID/bitrate)</li>
+          <li>Topology: HS/LS CAN, gateway ойлголт (суурь)</li>
+          <li>Wiring diagram дээр CAN сүлжээг унших</li>
+          <li>Termination + wiring шалгах стандарт (алхамчилсан)</li>
+          <li>Common faults: open/short/termination issue</li>
+          <li>Fault isolation workflow (жишээ кейсүүд)</li>
+          <li>ECU бүтэц: flash/EEPROM суурь ойлголт, зөв хэрэглээ</li>
+          <li>Дүгнэлт/тайлан: оношлогооны бичиглэл</li>
+        </ul>
+
+        <div class="contact-box" style="margin-top:14px">
+          <div class="contact-row">
+            <div class="muted">Түвшин</div>
+            <b>Advanced</b>
+          </div>
+          <div class="contact-row">
+            <div class="muted">Хугацаа</div>
+            <b>6–10 долоо хоног</b>
+          </div>
+          <div class="contact-row">
+            <div class="muted">Хэлбэр</div>
+            <b>Lab + тайлбар</b>
+          </div>
+          <div class="contact-row">
+            <div class="muted">Үнэ</div>
+            <b>(энд бичнэ)</b>
+          </div>
+        </div>
+
+        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="index.html#contact">Онлайн бүртгүүлэх</a>
+          <a class="btn btn-soft" href="index.html">Нүүр хуудас</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© AutoScan Training</div>
+      <div class="footer-links">
+        <a href="index.html#training">Сургалт</a>
+        <a href="index.html#contact">Бүртгэл</a>
+        <a href="index.html">Home</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
