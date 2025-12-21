@@ -202,6 +202,53 @@
             <b>990,000₮</b>
           </div>
         </div>
+<!-- =========================
+     GALLERY
+     ========================= -->
+<section class="content-card" id="gallery">
+  <div class="section-head">
+    <div>
+      <h2 class="section-title">Галерей</h2>
+      <p class="section-sub muted">Сургалтын орчин, дадлага, кейсүүдээс</p>
+    </div>
+  </div>
+
+  <div class="gallery-grid">
+    <!-- Доорх зургуудыг өөрийн зургаар солино: /img/gallery/... -->
+    <a class="gallery-item" href="/img/bg.jpeg" data-caption="Electrical training — сургалтын орчин">
+      <img src="/img/bg.jpeg" alt="Electrical training — сургалтын орчин" loading="lazy">
+    </a>
+
+    <a class="gallery-item" href="/img/bg.jpeg" data-caption="Multimeter / Wiring practice">
+      <img src="/img/bg.jpeg" alt="Multimeter / Wiring practice" loading="lazy">
+    </a>
+
+    <a class="gallery-item" href="/img/bg.jpeg" data-caption="Fuse / relay / ground шалгалт">
+      <img src="/img/bg.jpeg" alt="Fuse / relay / ground шалгалт" loading="lazy">
+    </a>
+
+    <a class="gallery-item" href="/img/bg.jpeg" data-caption="Voltage drop test дадлага">
+      <img src="/img/bg.jpeg" alt="Voltage drop test дадлага" loading="lazy">
+    </a>
+
+    <a class="gallery-item" href="/img/bg.jpeg" data-caption="Оношлогооны бодит кейс">
+      <img src="/img/bg.jpeg" alt="Оношлогооны бодит кейс" loading="lazy">
+    </a>
+
+    <a class="gallery-item" href="/img/bg.jpeg" data-caption="Танхим + дадлага">
+      <img src="/img/bg.jpeg" alt="Танхим + дадлага" loading="lazy">
+    </a>
+  </div>
+</section>
+
+<!-- Lightbox (томоор нээх) -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" type="button" aria-label="Close">×</button>
+  <div class="lightbox-inner">
+    <img class="lightbox-img" alt="">
+    <div class="lightbox-cap"></div>
+  </div>
+</div>
 
         <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
           <a class="btn btn-primary" href="index.html#contact">Онлайн бүртгүүлэх</a>
@@ -223,6 +270,46 @@
       </div>
     </div>
   </footer>
+<script>
+(() => {
+  const lb = document.getElementById('lightbox');
+  if (!lb) return;
+
+  const img = lb.querySelector('.lightbox-img');
+  const cap = lb.querySelector('.lightbox-cap');
+  const closeBtn = lb.querySelector('.lightbox-close');
+
+  const open = (src, caption) => {
+    img.src = src;
+    img.alt = caption || '';
+    cap.textContent = caption || '';
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const close = () => {
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden', 'true');
+    img.src = '';
+    cap.textContent = '';
+    document.body.style.overflow = '';
+  };
+
+  document.querySelectorAll('.gallery-item').forEach(a => {
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      open(a.getAttribute('href'), a.dataset.caption || a.querySelector('img')?.alt);
+    });
+  });
+
+  closeBtn.addEventListener('click', close);
+  lb.addEventListener('click', (e) => { if (e.target === lb) close(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lb.classList.contains('open')) close();
+  });
+})();
+</script>
 
 </body>
 </html>
