@@ -3,95 +3,195 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hybrid / EV Basics | AutoScan Training</title>
+  <title>Hybrid / EV Basics – AutoScan Training</title>
+  <meta name="description" content="Hybrid / EV Basics – Өндөр хүчдэлтэй системийн суурь ойлголт, аюулгүй ажиллагаа, basic оношлогоо." />
+
   <link rel="stylesheet" href="style.css" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="shortcut icon" href="favicon.ico">
+  <meta name="theme-color" content="#00d1ff">
 </head>
+
 <body>
 
 <header class="topbar">
   <div class="container topbar-inner">
     <a class="brand" href="index.html">
       <span class="brand-dot"></span>
-      <span class="brand-text">AutoScan <b>Training</b></span>
+      <span class="brand-text">AutoScan Training</span>
     </a>
-    <button class="nav-toggle" id="navToggle" aria-label="menu">☰</button>
-    <nav class="nav" id="nav">
-      <a href="index.html#training">Сургалт</a>
+
+    <nav class="nav">
+      <a href="index.html#training">Сургалтууд</a>
       <a href="index.html#about">Тухай</a>
       <a href="index.html#contact">Бүртгэл</a>
     </nav>
-    <a class="btn btn-ghost" href="index.html#contact">Бүртгүүлэх</a>
+
+    <a class="btn btn-soft" href="index.html#training">⬅ Буцах</a>
   </div>
 </header>
 
-<main class="page">
-  <div class="container">
-    <div class="breadcrumb">
-      <a href="index.html">Нүүр</a> <span>›</span> <b>Hybrid / EV Basics</b>
-    </div>
+<section class="hero">
+  <div class="container hero-grid">
 
-    <div class="page-hero">
-      <div>
-        <h1 class="page-title">Hybrid / EV Basics</h1>
-        <p class="page-sub">Өндөр хүчдэлтэй системийн суурь ойлголт + аюулгүй ажиллагаа + basic оношлогоо.</p>
-        <div class="page-actions">
-          <a class="btn btn-primary" href="index.html#contact">Онлайн бүртгүүлэх</a>
-          <a class="btn btn-soft" href="index.html#training">Бусад сургалт</a>
+    <div class="hero-left">
+      <div class="pill">
+        <span class="pill-dot"></span>
+        <span>Safety + Basics • Танхим + дадлага</span>
+      </div>
+
+      <h1 class="hero-title">Hybrid / EV Basics</h1>
+      <p class="hero-sub">
+        Өндөр хүчдэлтэй (HV) системийн суурь ойлголт, аюулгүй ажиллагаа,
+        basic оношлогооны зөв дараалал. <b>Safety first</b> зарчмаар сурна.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="index.html#contact">Онлайн бүртгүүлэх</a>
+        <a class="btn btn-soft" href="index.html#training">Бусад сургалт</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-num">HV Safety</div>
+          <div class="stat-txt">Дүрэм + дадал</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">System Basics</div>
+          <div class="stat-txt">Block diagram</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">Basic Diagnostics</div>
+          <div class="stat-txt">Workflow</div>
         </div>
       </div>
-
-      <div class="info-card">
-        <div class="info-row"><span>Түвшин</span><b>Safety + Basics</b></div>
-        <div class="info-row"><span>Хугацаа</span><b>2–6 долоо хоног</b></div>
-        <div class="info-row"><span>Хэлбэр</span><b>Тайлбар + дадлага</b></div>
-        <div class="info-row"><span>Үнэ</span><b>(энд бичнэ)</b></div>
-      </div>
     </div>
 
-    <section class="content-grid">
-      <div class="content-card">
-        <h2>Сурах зүйлс</h2>
-        <ul class="list">
-          <li>Hybrid/EV үндсэн бүтэц, блок схем ойлгох</li>
-          <li>Өндөр хүчдэлийн аюулгүй ажиллагаа (үндсэн дүрэм)</li>
-          <li>Basic fault finding логик</li>
-          <li>Системийн мэдээлэл уншилт, шалгалтын дараалал</li>
-        </ul>
+    <aside class="hero-card">
+      <div class="hero-card-top">
+        <span class="badge">SAFETY</span>
+        <span class="badge ghost">Hybrid / EV</span>
       </div>
 
-      <div class="content-card">
-        <h2>Анхаарах зүйл</h2>
-        <div class="callout">
-          <b>Safety first.</b>
-          <div class="muted">Өндөр хүчдэлийн системд зөв дүрэм мөрдөх нь хамгийн чухал.</div>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="terminal-title">Training Outline</span>
         </div>
-        <h2 style="margin-top:14px;">Сурах үр дүн</h2>
-        <ul class="list">
-          <li>Hybrid/EV системийг ойлгох суурь тавигдана</li>
-          <li>Аюулгүй ажиллах дадал суух</li>
-          <li>Basic оношилгооны зөв дараалалтай болно</li>
+        <pre class="terminal-body">• Hybrid/EV суурь бүтэц, блок схем
+• HV аюулгүй ажиллагаа (үндсэн дүрэм)
+• HV системийн ерөнхий шалгалт дараалал
+• Basic fault finding логик
+• Live data / системийн мэдээлэл унших суурь
+• Verify checklist (баталгаажуулалт)</pre>
+      </div>
+
+      <div class="hero-note">
+        <div class="hero-note-title">Анхаарах зүйл</div>
+        <ul class="checklist">
+          <li>Өндөр хүчдэлтэй систем дээр аюулгүй ажиллагаа нэн тэргүүнд.</li>
+          <li>Хууль бус/аюултай заавар орохгүй — зөв workflow-оор ажиллана.</li>
+          <li>Checklist + verify дадуулна.</li>
         </ul>
       </div>
-    </section>
+    </aside>
 
-    <section class="content-card">
-      <h2>Бүртгэл</h2>
-      <p class="muted">Бүртгүүлэх бол доорх товч дээр дар.</p>
-      <a class="btn btn-primary" href="index.html#contact">Онлайн бүртгүүлэх</a>
-    </section>
   </div>
-</main>
+</section>
+
+<section class="section section-alt">
+  <div class="container about-grid">
+
+    <div class="about-card glow">
+      <h2 class="section-title">Юу сурах вэ?</h2>
+      <p class="section-sub">
+        Hybrid/EV системийн үндсийг ойлгож, HV орчинд зөв, аюулгүй ажиллах дадал суулгана.
+        Дараа нь basic оношлогоог “алхамчилсан workflow”-оор хийх чадвар нэмэгдэнэ.
+      </p>
+
+      <div class="about-list">
+        <div class="about-item">
+          <div class="about-icon">🔋</div>
+          <div>
+            <b>Системийн суурь бүтэц</b>
+            <div class="muted">Battery, inverter, motor, DC-DC, OBC (суурь ойлголт).</div>
+          </div>
+        </div>
+
+        <div class="about-item">
+          <div class="about-icon">🦺</div>
+          <div>
+            <b>HV аюулгүй ажиллагаа</b>
+            <div class="muted">PPE, safety procedures, үндсэн дүрэм, аюулын бүс.</div>
+          </div>
+        </div>
+
+        <div class="about-item">
+          <div class="about-icon">🧭</div>
+          <div>
+            <b>Basic fault finding</b>
+            <div class="muted">Symptom → check → test → verify гэсэн дараалал.</div>
+          </div>
+        </div>
+
+        <div class="about-item">
+          <div class="about-icon">📈</div>
+          <div>
+            <b>Мэдээлэл унших суурь</b>
+            <div class="muted">DTC, live data, хэвийн утгын ойлголт.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:14px">
+        <a class="btn btn-primary" href="index.html#contact">Бүртгүүлэх</a>
+        <a class="btn btn-ghost" href="index.html#training" style="margin-left:10px">Сургалтууд руу</a>
+      </div>
+    </div>
+
+    <div class="about-card">
+      <h2 class="section-title">Хөтөлбөр</h2>
+      <p class="muted" style="margin-top:6px">(Жишиг бүтэц — кейсээр нэмэгдэнэ.)</p>
+
+      <ul class="checklist" style="margin-top:12px">
+        <li>Hybrid/EV үндсэн ойлголт (блок схем, нэршил)</li>
+        <li>HV аюулгүй ажиллагаа (үндсэн дүрэм + дадлага)</li>
+        <li>Basic checks: нөхцөл шалгах checklist</li>
+        <li>DTC + live data тайлбарлах суурь</li>
+        <li>Basic fault finding workflow (жишээ кейс)</li>
+        <li>Verify & report (баталгаажуулалт)</li>
+      </ul>
+
+      <div class="contact-box" style="margin-top:14px">
+        <div class="contact-row"><div class="muted">Түвшин</div><b>Safety + Basics</b></div>
+        <div class="contact-row"><div class="muted">Хугацаа</div><b>2-3 долоо хоног</b></div>
+        <div class="contact-row"><div class="muted">Хэлбэр</div><b>Тайлбар + дадлага</b></div>
+        <div class="contact-row"><div class="muted">Үнэ</div><b>1,500,000</b></div>
+      </div>
+
+      <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+        <a class="btn btn-primary" href="index.html#contact">Онлайн бүртгүүлэх</a>
+        <a class="btn btn-soft" href="index.html">Нүүр хуудас</a>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <footer class="footer">
   <div class="container footer-inner">
-    <div class="muted">© <span id="year"></span> AutoScan Training Center</div>
+    <div>© AutoScan Training</div>
     <div class="footer-links">
       <a href="index.html#training">Сургалт</a>
       <a href="index.html#contact">Бүртгэл</a>
+      <a href="index.html">Home</a>
     </div>
   </div>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
