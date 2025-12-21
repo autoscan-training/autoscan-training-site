@@ -54,8 +54,8 @@ a{color:inherit;text-decoration:none}
   box-shadow:0 0 0 6px rgba(var(--accent-rgb),.15);
 }
 .brand-text{
-  font-size: 30px;      /* эндээс том/бага болгож болно */
-  font-weight: 800;
+  font-size: 40px;      /* эндээс том/бага болгож болно */
+  font-weight: 1000;
   letter-spacing: .3px;
 }
 @media (max-width: 980px){
